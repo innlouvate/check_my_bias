@@ -1,4 +1,4 @@
-Check My Bias
+#Check My Bias
 =============
 
 * quiz progress bar
@@ -38,20 +38,25 @@ I want to be able to login'
 ```
 
 
-DB schema;
+#DB schema;
+```
 class Participant
   has many :answers
   has many :questions through :answers
-
+```
+```
 class Survey
   has many :questions
-
+```
+```
 class Questions
   belongs to :survey
   has many :answers
   has many :participants
-
+```
+```
 class Answer
   belongs to :participant
   belongs to :question
-  
+```
+
