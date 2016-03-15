@@ -35,4 +35,20 @@ I would like to be directed to a number of additional resource links'
 So that I can come back to view my results
 I want to be able to login'
 
-''
+
+DB schema;
+class Participant
+  has many :answers
+  has many :questions through :answers
+
+class Survey
+  has many :questions
+
+class Questions
+  belongs to :survey
+  has many :answers
+  has many :participants
+
+class Answer
+  belongs to :participant
+  belongs to :question
