@@ -35,6 +35,7 @@ I would like to be directed to a number of additional resource links'
 'As a survey taker
 So that I can come back to view my results
 I want to be able to login'
+```
 
 
 DB schema;
@@ -53,4 +54,4 @@ class Questions
 class Answer
   belongs to :participant
   belongs to :question
-  ```
+  
