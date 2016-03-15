@@ -7,7 +7,8 @@ Check My Bias
 * post to social media
 
 
-```'As a human
+```
+'As a human
 So I can understand the concept of unconscious bias
 I want an accessible explanation with examples'
 
@@ -51,4 +52,5 @@ class Questions
 
 class Answer
   belongs to :participant
-  belongs to :question```
+  belongs to :question
+  ```
