@@ -16,6 +16,9 @@ I want an accessible explanation with examples'
 So that I can understand my unconscious bias
 I want to take a short test to force me to think about my bias'
 
+'As a human
+I want to see instructions before I take the test so that I know what to do.'
+
 'As the designers
 So that the survey forces people to instinctively respond
 I want each question to be answered in less than 5 seconds'

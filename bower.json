@@ -1,0 +1,28 @@
+{
+  "name": "check_my_bias",
+  "homepage": "https://github.com/innlouvate/check_my_bias",
+  "authors": [
+    "seanhawkridge <sean@hawkridge.co>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "angular": "^1.5.0",
+    "angular-resource": "^1.5.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.0",
+    "angular-route": "^1.5.0"
+  }
+}
