@@ -1,4 +1,4 @@
-Check My Bias
+#Check My Bias
 =============
 
 * quiz progress bar
@@ -7,6 +7,7 @@ Check My Bias
 * post to social media
 
 
+```
 'As a human
 So I can understand the concept of unconscious bias
 I want an accessible explanation with examples'
@@ -37,21 +38,28 @@ I would like to be directed to a number of additional resource links'
 'As a survey taker
 So that I can come back to view my results
 I want to be able to login'
+```
 
 
-DB schema;
+#DB schema;
+```
 class Participant
   has many :answers
   has many :questions through :answers
-
+```
+```
 class Survey
   has many :questions
-
+```
+```
 class Questions
   belongs to :survey
   has many :answers
   has many :participants
-
+```
+```
 class Answer
   belongs to :participant
   belongs to :question
+```
+
