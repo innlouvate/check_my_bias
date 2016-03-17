@@ -19,8 +19,8 @@ module.exports = function(config) {
       '../vendor/assets/bower_components/angular-route/angular-route.js',
       '../vendor/assets/bower_components/angular-resource/angular-resource.js',
       '../vendor/assets/bower_components/angular-mocks/angular-mocks.js',
-      '../app/javascripts/**/*.js',
-      'test/**/*.spec.js'
+      '../app/assets/javascripts/**/*.js',
+      'js/controller/*.spec.js'
     ],
 
 
@@ -70,5 +70,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
-}
+  });
+};
