@@ -1,19 +1,22 @@
 describe('DisplayQuestionController', function() {
 
-  var ctrl, scope, httpBackend;
+  var ctrl, httpBackend;
 
-  beforeEach(function(){
+  beforeEach(function() {
+    console.log('1st before');
     module('biasQuestionnaire');
   });
 
   beforeEach(function() {
-    inject(function($controller, $rootScope, $httpBackend) {
+      console.log('got here');
+    inject(function($controller, $httpBackend) {
       ctrl = $controller('DisplayQuestionController');
-      scope = $rootScope;
       httpBackend = $httpBackend;
+      console.log(httpBackend);
+      console.log(ctrl);
       httpBackend
-      .expectGET("assets/test.json")
-      .respond({questionName: "Q1"});
+        .expectGET("assets/test.json")
+        .respond({questionName: "Q1"});
     });
   });
 

@@ -34,6 +34,12 @@ group :development, :test do
   gem 'angular-rails-templates'
 end
 
+source 'https://rails-assets.org'
+  gem "rails-assets-angular"
+group :development, :test do
+  gem 'rails-assets-angular-mocks'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
