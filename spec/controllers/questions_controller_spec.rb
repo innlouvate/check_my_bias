@@ -4,7 +4,7 @@ describe QuestionsController do
 
   render_views
 
-  it 'sends a list of questions and answers' do
+  it 'displays the questions and answers in the database' do
     test_question = Question.create(content: "Sample content")
     test_answer = Answer.create(content: "another test", question_id: test_question.id)
     get :index
