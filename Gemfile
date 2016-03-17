@@ -16,6 +16,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'sass'
 
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -44,4 +46,6 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
+  gem 'shoulda'
+  gem 'rspec-collection_matchers'
 end

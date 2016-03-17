@@ -36,4 +36,4 @@ module CheckMyBias
 
     config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff|woff2)$)
    end
-  end
+end
