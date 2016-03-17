@@ -2,9 +2,9 @@
 
 <main ng-controller="DisplayQuestionController as viewQs">
 <div id="questions-box"><ul ng-repeat="(questionIndex, question) in viewQs.questions">
-  <li id="question{{questionIndex+1}}" class='questionContent'>{{question.description}}
+  <li id="question{{questionIndex+1}}" class='questionContent'>{{question.content}}
     <ul ng-repeat="answer in question.answers">
-      <button class="answer" ng-click="show = !show">{{answer.description}}</button>
+      <button class="answer" ng-click="show = !show">{{answer.content}}</button>
       <div class="answerText" ng-show="show">{{answer.answerText}}</div>
     </ul>
   </li>

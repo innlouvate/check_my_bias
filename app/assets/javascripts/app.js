@@ -13,10 +13,10 @@ function ($routeProvider, $locationProvider) {
      .when('/quiz', {
        templateUrl: 'quiz.html',
        controller: 'DisplayQuestionController'
-     })
-     .otherwise({
-       redirectTo: '/'
      });
+    //  .otherwise({
+    //    redirectTo: '/'
+    //  });
      $locationProvider.html5Mode({
        enabled: true,
        requireBase: false,

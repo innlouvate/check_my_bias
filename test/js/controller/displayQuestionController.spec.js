@@ -1,28 +1,30 @@
 describe('DisplayQuestionController', function() {
 
-  var ctrl, httpBackend;
+  var ctrl, $httpBackend;
 
-  beforeEach(function() {
-    console.log('1st before');
-    module('biasQuestionnaire');
-  });
+  beforeEach(module('biasQuestionnaire'));
 
-  beforeEach(function() {
-      console.log('got here');
-    inject(function($controller, $httpBackend) {
-      ctrl = $controller('DisplayQuestionController');
-      httpBackend = $httpBackend;
-      console.log(httpBackend);
-      console.log(ctrl);
-      httpBackend
-        .expectGET("assets/test.json")
+  beforeEach(inject(function(_$controller_, _$httpBackend_) {
+      console.log('running injector');
+      console.log('controller: ' + _$controller_);
+      $controller = _$controller_;
+      $httpBackend = _$httpBackend_;
+      $httpBackend
+        .expectGET("http://localhost:3000/questions")
         .respond({questionName: "Q1"});
-    });
-  });
+
+      ctrl = $controller('DisplayQuestionController');
+
+      console.log('ctrl: ' + ctrl);
+
+      console.log('no problems in the injector');
+    }));
 
 
   it('gets the list of test questions and passes it as json', function(){
-    httpBackend.flush();
+    console.log('running the test');
+    console.log('httpBackend (in the test): ' + $httpBackend);
+    $httpBackend.flush();
     expect(ctrl.questions).toEqual({questionName: 'Q1'});
   });
 

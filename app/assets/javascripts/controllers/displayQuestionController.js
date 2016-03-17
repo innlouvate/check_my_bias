@@ -6,7 +6,7 @@
       .controller('DisplayQuestionController', function($http) {
       var self = this;
 
-      $http.get('assets/test.json').success(function(data){
+      $http.get('http://localhost:3000/questions').success(function(data){
         self.questions = data;
         console.log(data);
       });
