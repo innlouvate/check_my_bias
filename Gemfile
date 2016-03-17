@@ -18,6 +18,10 @@ gem 'sass'
 
 gem 'devise'
 
+gem 'rabl'
+
+gem 'oj'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -48,4 +52,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda'
   gem 'rspec-collection_matchers'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rack'
 end
