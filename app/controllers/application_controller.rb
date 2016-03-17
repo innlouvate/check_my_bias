@@ -3,8 +3,12 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def angular
-    render 'layouts/application'
+  def index
+
+  end
+
+  def quiz
+
   end
 
 end

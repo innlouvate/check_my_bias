@@ -31,6 +31,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'bower-rails'
+  gem 'angular-rails-templates'
 end
 
 group :development do

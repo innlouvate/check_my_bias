@@ -1,0 +1,12 @@
+<h1>Awesome test of unconcious bias</h1>
+
+<main ng-controller="DisplayQuestionController as viewQs">
+<div id="questions-box"><ul ng-repeat="(questionIndex, question) in viewQs.questions">
+  <li id="question{{questionIndex+1}}" class='questionContent'>{{question.description}}
+    <ul ng-repeat="answer in question.answers">
+      <button class="answer" ng-click="show = !show">{{answer.description}}</button>
+      <div class="answerText" ng-show="show">{{answer.answerText}}</div>
+    </ul>
+  </li>
+</ul></div>
+</main>

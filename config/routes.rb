@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
-  root to: 'application#angular'
+  root to: 'application#index'
+  get '*path' => 'application#index'
 
   devise_for :users
+
+  resources :users do
+    get :quiz 
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
