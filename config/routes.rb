@@ -6,9 +6,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: "application#index"
   resources :questions, shallow: true do
-    resources :answers do
-      resources :responses
-    end
+    resources :answers
+    resources :responses
   end
 
   # Example of regular route:

@@ -17,7 +17,7 @@ FactoryGirl.define do
 
   factory :answer do
     content {Faker::Hacker.abbreviation}
-    # association :question, factory: :question
+    association :question, factory: :question
   end
 
   factory :user do
