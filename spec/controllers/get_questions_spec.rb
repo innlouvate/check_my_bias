@@ -3,10 +3,12 @@ require 'rails_helper'
 
 describe QuestionsController do
 
+  render_views
+
   it 'sends a list of questions and answers' do
     FactoryGirl.create_list(:question, 5)
 
-    get :index
+    get "/questions"
 
     json = JSON.parse(response.body)
 
