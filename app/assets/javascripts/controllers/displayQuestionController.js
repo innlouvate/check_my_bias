@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-      .module('biasQuestionnaire')
+      .module('biasQuestionnaire.questions', [])
       .controller('DisplayQuestionController', function($http) {
       var self = this;
 
@@ -10,16 +10,9 @@
         self.questions = data;
       });
 
-      self.displayAnswerText = displayAnswerText();
-
-      function displayAnswerText(index) {
-        self.questionIndex = index;
-      }
-
-      self.recordAnswers = function(answerID) {
+      self.recordAnswers = function(questionID, answerID) {
         var data = JSON.stringify({"answer_id": answerID});
-        // var data;
-        $http.post('http://localhost:3000/questions/1/responses', data, JSON)
+        $http.post('http://localhost:3000/questions/'+questionID+'/responses', data, JSON)
           .success(function ( data, status, header, JSON ) {
           })
           .error(function ( data, status, header, JSON ) {

@@ -1,8 +1,6 @@
 angular
-  .module('biasQuestionnaire', [
-  'templates',
-  'ngRoute'
-
+  .module('biasQuestionnaire', ['ngRoute', 'templates',
+  'biasQuestionnaire.questions'
 ]).config(['$routeProvider', '$locationProvider',
 function ($routeProvider, $locationProvider) {
    $routeProvider
@@ -13,14 +11,10 @@ function ($routeProvider, $locationProvider) {
      .when('/quiz', {
        templateUrl: 'quiz.html',
        controller: 'DisplayQuestionController'
+     })
+     .otherwise({
+       redirectTo: '/'
      });
-    //  .when('/questions/:question_id/responses/new', {
-    //    templateUrl: 'quiz.html',
-    //    controller: 'DisplayQuestionController'
-    //  });
-    //  .otherwise({
-    //    redirectTo: '/'
-    //  });
      $locationProvider.html5Mode({
        enabled: true,
        requireBase: false,
