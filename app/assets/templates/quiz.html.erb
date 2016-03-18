@@ -1,18 +1,44 @@
-<h1>Awesome test of unconscious bias</h1>
 
-<main ng-controller="DisplayQuestionController as viewQs">
+<section id="quiz">
 
-<div id="questions-box"><ul ng-repeat="(questionIndex, question) in viewQs.questions">
+  <div class="row">
 
-  <li id="question{{questionIndex+1}}" class='questionContent'>{{question.question.content}}
-    <ul ng-repeat="answer in question.question.answers">
+    <div ng-controller="DisplayQuestionController as viewQs">
 
-      <button class="answer" ng-click="viewQs.recordAnswers(questionIndex, answer.answer.id)">{{answer.answer.content}}</button>
-      <!-- <div class="answerText" ng-show="show">{{answer.answerText}}</div> -->
+      <div id="questions-box">
 
-    </ul>
-  </li>
+        <h2>The Quiz</h2>
 
-</ul></div>
 
-</main>
+        <div ng-repeat="(questionIndex, question) in viewQs.questions">
+
+          <div class="small-10 small-centered columns">
+
+            <div id="question{{questionIndex+1}}" class='questionContent'>
+
+              {{question.question.content}}
+
+              <div class="buttons">
+
+                <div class="button-container" ng-repeat="answer in question.question.answers">
+
+                  <button class="answer" ng-click="viewQs.recordAnswers(questionIndex, answer.answer.id)">{{answer.answer.content}}</button>
+                  <!-- <div class="answerText" ng-show="show">{{answer.answerText}}</div> -->
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

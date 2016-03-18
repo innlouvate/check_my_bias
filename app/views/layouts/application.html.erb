@@ -6,11 +6,42 @@
      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
      <%= csrf_meta_tags %>
+     <script src="https://use.typekit.net/das0adf.js"></script>
+     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
+
+
 
   <body ng-app="biasQuestionnaire">
 
+    <header id="masthead">
+
+      <div class="user-actions">
+        Sign In | Sign Up
+      </div>
+
+      <div class="row">
+
+        <div class="small-10 small-centered columns">
+
+          <h1>Check My Bias</h1>
+
+        </div>
+
+      </div>
+
+    </header>
+
     <%= yield %>
 
+    <footer id="colophon">
+      <div class="row">
+        <div class="small-10 small-centered columns">
+          ...
+        </div>
+      </div>
+    </footer>
+
   </body>
+
 </html>
