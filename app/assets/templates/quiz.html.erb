@@ -22,7 +22,7 @@
 
                 <div class="button-container" ng-repeat="answer in question.question.answers">
 
-                  <button class="answer" ng-click="viewQs.recordAnswers(answer.answer.id)">{{answer.answer.content}}</button>
+                  <button class="answer" ng-click="viewQs.recordAnswers(questionIndex, answer.answer.id)">{{answer.answer.content}}</button>
                   <!-- <div class="answerText" ng-show="show">{{answer.answerText}}</div> -->
 
                 </div>
