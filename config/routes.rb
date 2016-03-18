@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'layout#index'
+  root to: 'application#index'
 
   devise_for :users
   #
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :answers
     resources :responses
   end
+
 
   get '*path' => 'application#index'
   # Example of regular route:
