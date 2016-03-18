@@ -35,6 +35,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'bower-rails'
+  gem 'angular-rails-templates'
+end
+
+source 'https://rails-assets.org'
+  gem "rails-assets-angular"
+group :development, :test do
+  gem 'rails-assets-angular-mocks'
 end
 
 group :development do
