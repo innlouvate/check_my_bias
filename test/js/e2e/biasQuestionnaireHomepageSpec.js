@@ -1,7 +1,7 @@
 describe('biasQuestionnaire homepage', function () {
 
   beforeEach(function () {
-    browser.get('http://localhost:3000/');
+    browser.get('http://localhost:3000/quiz');
     var questions = element.all(by.css('.questionContent'));
   });
 

@@ -2,33 +2,23 @@
     'use strict';
 
     angular
-      .module('biasQuestionnaire')
+      .module('biasQuestionnaire.questions', [])
       .controller('DisplayQuestionController', function($http) {
       var self = this;
 
-      $http.get('assets/test.json').success(function(data){
+      $http.get('http://localhost:3000/questions').success(function(data){
         self.questions = data;
-        console.log(data);
       });
 
-      self.displayAnswerText = displayAnswerText();
-
-      function displayAnswerText(index) {
-        self.questionIndex = index;
+      self.recordAnswers = function(questionID, answerID) {
+        var data = JSON.stringify({"answer_id": answerID});
+        $http.post('http://localhost:3000/questions/'+questionID+'/responses', data, JSON)
+          .success(function ( data, status, header, JSON ) {
+          })
+          .error(function ( data, status, header, JSON ) {
+          });
+        console.log(data);
       }
 
-      // self.recordAnswers = recordAnswers();
-      //
-      // function recordAnswers() {
-      //   var data = {"answer": self.answer};
-      //   $http.post('assets/test.json', data, JSON)
-      //     .success(function ( data, status, header, JSON ) {
-      //     })
-      //     .error(function ( data, status, header, JSON ) {
-      //     });
-      //     console.log(data);
-      //   }
-
-
   });
-}());
+})();

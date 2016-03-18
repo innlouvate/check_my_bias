@@ -1,0 +1,81 @@
+
+$colour_1: #E9E3D5;
+$colour_2: #73C8A9;
+$colour_3: #444444;
+
+@mixin _button {
+    background: $colour_1;
+    color: $colour_3;
+    text-transform: uppercase;
+    border: 4px solid $colour_1;
+    border-bottom: 4px solid #fff;
+    &:hover {
+      background: $colour_2;
+      color: #fff;
+      border: 4px solid #fff;
+      border-bottom: 4px solid #fff;
+    }
+}
+
+body {
+  background: $colour_2;
+}
+
+header#masthead {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 4em 0;
+  background: $colour_1;
+  border-bottom: 4px solid #fff;
+  h1 {
+    text-transform: uppercase;
+    color: $colour_2;
+    text-align: center;
+  }
+  .user-actions {
+    position: absolute;
+    right: 2em;
+    top: 1em;
+  }
+}
+
+.intro {
+  position: relative;
+  text-align: center;
+  padding: 4em 0;
+  p {
+    font-size: 1.5em;
+  }
+  h2 {
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 24%;
+      height: 3px;
+      display: block;
+      bottom: 0;
+      left: 38%;
+      background: $colour_3;
+    }
+  }
+  a {
+    @include _button;
+    padding: 0.7em 1em;
+    font-family: "brandon-grotesque";
+    margin-top: 2em;
+    display: inline-block;
+  }
+}
+
+footer#colophon {
+  padding: 3em 0;
+  display: block;
+  width: 100%;
+  background: #444;
+  text-align: center;
+  color: $colour_1;
+}

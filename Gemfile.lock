@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.5.2)
       actionpack (= 4.2.5.2)
@@ -37,6 +38,10 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    angular-rails-templates (1.0.0)
+      railties (>= 4.2, < 6)
+      sprockets (~> 3.0)
+      tilt
     arel (6.0.3)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
@@ -110,6 +115,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.5.2)
       sprockets-rails
+    rails-assets-angular (1.5.1)
+    rails-assets-angular-mocks (1.5.1)
+      rails-assets-angular (= 1.5.1)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -200,6 +208,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angular-rails-templates
   bower-rails
   byebug
   capybara
@@ -213,6 +222,8 @@ DEPENDENCIES
   rabl
   rack
   rails (= 4.2.5.2)
+  rails-assets-angular
+  rails-assets-angular-mocks
   rspec-collection_matchers
   rspec-rails
   sass
@@ -223,6 +234,3 @@ DEPENDENCIES
   spring
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-
-BUNDLED WITH
-   1.11.2

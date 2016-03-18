@@ -20,6 +20,7 @@ module.exports = function(config) {
       '../vendor/assets/bower_components/angular-resource/angular-resource.js',
       '../vendor/assets/bower_components/angular-mocks/angular-mocks.js',
       '../app/assets/javascripts/**/*.js',
+      '../app/assets/javascripts/*.js',
       'js/controller/*.spec.js'
     ],
 

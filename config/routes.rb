@@ -1,19 +1,26 @@
 Rails.application.routes.draw do
 
+  root to: 'application#index'
+
 
   devise_for :users
+  #
+  resources :questions do
+    get :quiz
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: "application#index"
+
   resources :questions, shallow: true do
     resources :answers
     resources :responses
   end
 
 
+  get '*path' => 'application#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
