@@ -1,18 +1,77 @@
-<h1>Awesome test of unconscious bias</h1>
 
-<main ng-controller="DisplayQuestionController as viewQs">
+<header id="masthead">
 
-<div id="questions-box"><ul ng-repeat="(questionIndex, question) in viewQs.questions">
+  <div class="user-actions">
+    Sign In | Sign Up
+  </div>
 
-  <li id="question{{questionIndex+1}}" class='questionContent'>{{question.question.content}}
-    <ul ng-repeat="answer in question.question.answers">
+  <div class="row">
 
-      <button class="answer" ng-click="viewQs.recordAnswers(answer.answer.id)">{{answer.answer.content}}</button>
-      <!-- <div class="answerText" ng-show="show">{{answer.answerText}}</div> -->
+    <div class="small-10 small-centered columns">
 
-    </ul>
-  </li>
+      <h1>Check My Bias</h1>
 
-</ul></div>
+    </div>
 
-</main>
+  </div>
+
+</header>
+
+<section id="quiz">
+
+  <div class="intro">
+    <div class="row">
+      <div class="small-12 small-centered columns">
+        <p>
+          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div ng-controller="DisplayQuestionController as viewQs">
+
+      <div id="questions-box">
+
+        <div ng-repeat="(questionIndex, question) in viewQs.questions">
+
+          <div class="small-10 small-centered columns">
+
+            <div id="question{{questionIndex+1}}" class='questionContent'>
+
+              {{question.question.content}}
+
+              <div class="buttons">
+
+                <div class="button-container" ng-repeat="answer in question.question.answers">
+
+                  <button class="answer" ng-click="viewQs.recordAnswers(answer.answer.id)">{{answer.answer.content}}</button>
+                  <!-- <div class="answerText" ng-show="show">{{answer.answerText}}</div> -->
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer id="colophon">
+  <div class="row">
+    <div class="small-10 small-centered columns">
+      ...
+    </div>
+  </div>
+</footer>

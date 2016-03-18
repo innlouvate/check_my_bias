@@ -1,0 +1,36 @@
+
+$colour_1: #E9E3D5;
+$colour_2: #73C8A9;
+$colour_3: #444444;
+
+body {
+  background: $colour_2;
+}
+
+header#masthead {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 4em 0;
+  background: $colour_1;
+  border-bottom: 4px solid #fff;
+  h1 {
+    text-transform: uppercase;
+    color: $colour_2;
+    text-align: center;
+  }
+  .user-actions {
+    position: absolute;
+    right: 2em;
+    top: 1em;
+  }
+}
+
+footer#colophon {
+  padding: 3em 0;
+  display: block;
+  width: 100%;
+  background: #444;
+  text-align: center;
+  color: $colour_1;
+}
