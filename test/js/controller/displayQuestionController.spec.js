@@ -2,7 +2,7 @@ describe('DisplayQuestionController', function() {
 
   var ctrl, $httpBackend;
 
-  beforeEach(module('biasQuestionnaire'));
+  beforeEach(module('biasQuestionnaire.questions'));
 
   beforeEach(inject(function(_$controller_, _$httpBackend_) {
       console.log('running injector');
