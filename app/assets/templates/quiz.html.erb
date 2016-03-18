@@ -1,39 +1,14 @@
 
-<header id="masthead">
-
-  <div class="user-actions">
-    Sign In | Sign Up
-  </div>
-
-  <div class="row">
-
-    <div class="small-10 small-centered columns">
-
-      <h1>Check My Bias</h1>
-
-    </div>
-
-  </div>
-
-</header>
-
 <section id="quiz">
-
-  <div class="intro">
-    <div class="row">
-      <div class="small-12 small-centered columns">
-        <p>
-          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.
-        </p>
-      </div>
-    </div>
-  </div>
 
   <div class="row">
 
     <div ng-controller="DisplayQuestionController as viewQs">
 
       <div id="questions-box">
+
+        <h2>The Quiz</h2>
+
 
         <div ng-repeat="(questionIndex, question) in viewQs.questions">
 
@@ -67,11 +42,3 @@
   </div>
 
 </section>
-
-<footer id="colophon">
-  <div class="row">
-    <div class="small-10 small-centered columns">
-      ...
-    </div>
-  </div>
-</footer>
