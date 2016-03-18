@@ -18,6 +18,10 @@ gem 'sass'
 
 gem 'devise'
 
+gem 'rabl'
+
+gem 'oj'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -31,6 +35,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'bower-rails'
+  gem 'angular-rails-templates'
+end
+
+source 'https://rails-assets.org'
+  gem "rails-assets-angular"
+group :development, :test do
+  gem 'rails-assets-angular-mocks'
 end
 
 group :development do
@@ -48,4 +59,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda'
   gem 'rspec-collection_matchers'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rack'
 end

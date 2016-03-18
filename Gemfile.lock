@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.5.2)
       actionpack (= 4.2.5.2)
@@ -37,6 +38,10 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    angular-rails-templates (1.0.0)
+      railties (>= 4.2, < 6)
+      sprockets (~> 3.0)
+      tilt
     arel (6.0.3)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
@@ -66,6 +71,13 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.6.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
+    faker (1.6.3)
+      i18n (~> 0.5)
     ffi (1.9.10)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -84,8 +96,11 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    oj (2.14.6)
     orm_adapter (0.5.0)
     pg (0.18.4)
+    rabl (0.12.0)
+      activesupport (>= 2.3.14)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -100,6 +115,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.5.2)
       sprockets-rails
+    rails-assets-angular (1.5.1)
+    rails-assets-angular-mocks (1.5.1)
+      rails-assets-angular (= 1.5.1)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -190,14 +208,22 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angular-rails-templates
   bower-rails
   byebug
   capybara
   database_cleaner
   devise
+  factory_girl_rails
+  faker
   jbuilder (~> 2.0)
+  oj
   pg (~> 0.15)
+  rabl
+  rack
   rails (= 4.2.5.2)
+  rails-assets-angular
+  rails-assets-angular-mocks
   rspec-collection_matchers
   rspec-rails
   sass
