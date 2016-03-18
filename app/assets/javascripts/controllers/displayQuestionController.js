@@ -18,7 +18,7 @@
           .error(function ( data, status, header, JSON ) {
           });
         console.log(data);
-      }
+      };
 
   });
 })();
